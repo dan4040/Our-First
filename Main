@@ -1,0 +1,115 @@
+print('What is your First name?')
+firstname = input()
+print ('What is your surname?')
+surname = input()
+
+admin = ('Nick1')
+
+admin = ('Dan1')
+
+if (firstname) == admin:
+        print ('Hello Master')
+        print('Log In')
+	
+print('Username: (If you dont have a user name, Press Enter Twice)')
+
+username = (surname[0]+surname[1]+surname[2]+firstname[0]+str(len(surname)))
+
+attempt = input()
+
+if attempt == username:
+        print ('Password:')
+else:
+        print('This is the wrong Username. Please Restart the File to log on')
+
+admin_password = input()
+
+if admin_password == ('Admin'):
+        print ('You Have Now Been Logged On')  
+
+else:
+    print ("Hello,", firstname, surname)
+
+    print("Your initials are:", firstname[0],surname[0])
+
+    print('Your firstname has', (len(firstname)), 'digits!')
+    print('Your surname has', (len(surname)), 'digits!')
+
+    print(firstname.upper())
+    print(surname.upper())
+
+    username = (surname[0]+surname[1]+surname[2]+firstname[0]+str(len(surname))) 
+
+    print ('Your Username is :',username)
+
+    print ('Input your Username (Case Sensitive)')
+    attempt = input()
+
+    if attempt == username:
+        print ('Access Granted')
+    else:
+        print ('Unlucky!')
+
+    if attempt == username:
+
+
+        valid_password_entered = False
+        lowercase_found = 0
+        uppercase_found = 0
+        numeric_found = 0
+
+        while not valid_password_entered:
+            password_str = input('Please enter A New Password: ')
+
+            for ch in password_str:
+                if ch.islower():
+                    lowercase_found = 1
+                if ch.isupper():
+                    uppercase_found = 1
+                if ch.isdigit():
+                    numeric_found = 1
+
+                if lowercase_found and uppercase_found and numeric_found:
+                    break
+
+            password_strength = lowercase_found + uppercase_found + numeric_found
+            if password_strength in range(1,4):
+                print ('The password', password_str, 'is valid.')
+
+                if password_strength == 1:
+                    print ('The Password', password_str, 'is a WEAK password.')
+                elif password_strength == 2:
+                    print ('The Password', password_str, 'is a MEDIUM password.')
+                else:
+                    print ('The Password', password_str, 'is a STRONG password.')
+
+                valid_password_entered = True
+            else:
+                print ('Invalid Password:', password_str, 'Contained neither letters or numbers!')
+                
+    new_password_str = input('Re-Enter password to set as New Password:')
+    if new_password_str == password_str:
+        password = new_password_str
+        print ('Set as new password')
+    else:
+        print ('These Passwords are not the same! Please Restart the File')
+
+
+    if new_password_str == password_str:
+        print('Log In')
+
+        print('Username:')
+        attempt = input()
+        if attempt == username:
+            print ('Password:')
+        else:
+            print('This is the wrong Username. Please Restart the File to log on')
+
+        entered_password = input()
+        if entered_password == new_password_str:
+            print ('You Have Now Been Logged On')
+        else:
+            print ('This is the wrong Password. Please Restart the File to log on')
+
+        print ('END OF FILE')
+            
