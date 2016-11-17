@@ -1,32 +1,35 @@
+print ('Welcome')
+print (' ')
 print('What is your First name?')
 firstname = input()
 print ('What is your surname?')
 surname = input()
 
-admin = ('Nick1')
+print ('Username:')
+print ('(If you dont have have never used this before or have forgotten it, Just Make a Fake One! (E.G. Your Name))')
 
-admin = ('Dan1')
-
-if (firstname) == admin:
-        print ('Hello Master')
-        print('Log In')
-	
-print('Username: (If you dont have a user name, Press Enter Twice)')
-
-username = (surname[0]+surname[1]+surname[2]+firstname[0]+str(len(surname)))
+username = (surname[0]+surname[1]+surname[2]+firstname[0]+str(len(surname))) 
 
 attempt = input()
-
 if attempt == username:
-        print ('Password:')
-else:
-        print('This is the wrong Username. Please Restart the File to log on')
+        print ('Access Granted')
+        print ('Password')
 
-admin_password = input()
+        entered_password = input()
+        if entered_password == ('ADMIN') and username == ('HarD6') or entered_password == ('ADMIN') and username == ('DigN55'):
+            print ('You Have Now Been Logged On. Youre ME!!')
+        else:
+            print ('This is the Not the Admin Password, Meaning your not me!.')
+        if entered_password == ('Returning'):
+            print ('You Have Now Been Logged On')
+        else:
+            print ('This is the wrong Password or its the admin Log In.')
 
-if admin_password == ('Admin'):
-        print ('You Have Now Been Logged On')  
 
+            #RESTART MODULE SOMEHOW!
+            
+        
+            
 else:
     print ("Hello,", firstname, surname)
 
@@ -111,5 +114,15 @@ else:
         else:
             print ('This is the wrong Password. Please Restart the File to log on')
 
-        print ('END OF FILE')
-            
+print (' ')
+print ('Welcome Back,', firstname, surname)
+print (' ')
+print ('Welcome to the Revolutionary OS, DanNick!')
+print ('The OS is currently under a huge amount of maintanance, and is being updated constantly. Keep checking for updates!')
+print ('(REMEMBER YOUR USERNAME - TYPE IT IN THE FIRST BAR, WITH THE PASSWORD "Returning". This will be fixed in an update Shortly!)')        
+
+
+print ('END OF FILE')
+
+
+
